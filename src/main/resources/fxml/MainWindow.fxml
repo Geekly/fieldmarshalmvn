@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="440.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.geeklythings.fm.ui.fxml.MainWindowController">
+    <children><SplitPane dividerPositions="0.17696969696969697" focusTraversable="true" prefHeight="526.5" prefWidth="827.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <VBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="437.0" prefWidth="133.0" style="-fx-spacing: 10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+              <children>
+                <Button fx:id="buttonLoadTournament" mnemonicParsing="false" onAction="#loadTournament" prefHeight="45.0" prefWidth="125.0" text="Load" />
+                <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="125.0" text="Tournament" />
+            <Button fx:id="button" layoutX="220.5" layoutY="501.5" onAction="#handleButtonAction" text="Click Me!" />
+              </children>
+<padding>
+<Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+</padding>
+            </VBox>
+        <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="471.0">
+<children><Pane prefHeight="200.0" prefWidth="200.0" />
+</children>
+        </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>

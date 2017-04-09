@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+
+<ScrollPane prefHeight="401.0" prefViewportHeight="362.0" prefViewportWidth="569.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.geeklythings.fm.ui.fxml.TournamentViewController">
+<content><TableView layoutX="-90.0" layoutY="1.0" prefHeight="405.0" prefWidth="603.0">
+  <columns>
+    <TableColumn prefWidth="75.0" text="C1" />
+    <TableColumn prefWidth="75.0" text="C2" />
+  </columns>
+</TableView>
+</content>
+</ScrollPane>
