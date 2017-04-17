@@ -9,7 +9,7 @@
       <property name="eclipselink.logging.level" value="CONFIG"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://jennyhooks.com:3306/jennyhoo_fm?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="jennyhoo_fmuser"/>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="cD11z63Oh1h4"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
       <property name="eclipselink.canonicalmodel.subpackage" value="prod"/>
@@ -27,6 +27,7 @@
       <property name="javax.persistence.jdbc.password" value="fmuser"/>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
       <property name="eclipselink.canonicalmodel.subpackage" value="test"/>
+      <property name="eclipselink.logging.level" value="CONFIG"/>
     </properties>
   </persistence-unit>
 </persistence>
