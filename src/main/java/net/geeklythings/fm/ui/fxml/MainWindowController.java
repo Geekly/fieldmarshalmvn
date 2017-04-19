@@ -17,14 +17,15 @@ import javafx.stage.Window;
 public class MainWindowController implements Initializable {
     
     public static Stage primaryStage;
-    @FXML private Label label;
+    @FXML private Label theLabel;
     @FXML private Window loadTournamentDialog;
     @FXML private LoadTournamentDialogController loadTournamentDialogController;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        theLabel.setText("Hello World!");
+        
     }
     
     @Override
@@ -34,6 +35,7 @@ public class MainWindowController implements Initializable {
     
     @FXML
     private void loadTournament(ActionEvent event) {
+        System.out.println("loadTournament");
         loadTournamentDialogController = new LoadTournamentDialogController();
         try {
                 loadTournamentDialogController.showDialog(primaryStage);

@@ -19,7 +19,10 @@
 </padding>
             </VBox>
         <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="471.0">
-<children><Pane prefHeight="200.0" prefWidth="200.0" />
+<children><Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="theLabel" layoutX="43.0" layoutY="68.0" prefHeight="21.0" prefWidth="114.0" text="Label" />
+                     </children></Pane>
 </children>
         </AnchorPane>
         </items>

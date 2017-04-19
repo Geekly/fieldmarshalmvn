@@ -7,9 +7,9 @@
     <class>net.geeklythings.fm.model.entity.Tournament</class>
     <properties>
       <property name="eclipselink.logging.level" value="CONFIG"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://jennyhooks.com:3306/jennyhoo_fm?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://jennyhooks.com:3306/jennyhoo_fm?zeroDateTimeBehavior=convertToNull&amp;useJD‌​BCCompliantTimezoneS‌​hift=true&amp;useLeg‌​acyDatetimeCode=fals‌​e&amp;serverTimezone‌​=UTC"/>
       <property name="javax.persistence.jdbc.user" value="jennyhoo_fmuser"/>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="cD11z63Oh1h4"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
       <property name="eclipselink.canonicalmodel.subpackage" value="prod"/>

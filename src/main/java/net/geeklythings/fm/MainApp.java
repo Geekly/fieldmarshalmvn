@@ -31,10 +31,12 @@ public class MainApp extends Application {
         tournamentJpaController = new TournamentJpaController(_emf);
         tournamentManager = new TournamentManager( tournamentJpaController ); 
         
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/MainWindow.fxml"));
+        // Resource resource = getClass().getResource("src/main/resources/fxml/MainWindow.fxml");
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainWindow.fxml"));
         
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/resources/styles/Styles.css");
+        scene.getStylesheets().add("/styles/Styles.css");
         
         stage.setTitle("Field Marshal Tournament Runner");
         stage.setScene(scene);

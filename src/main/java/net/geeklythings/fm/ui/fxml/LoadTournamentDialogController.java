@@ -53,10 +53,10 @@ public class LoadTournamentDialogController implements Initializable {
     public void showDialog( Stage parentStage )
     {    
         this.myParent = parentStage;
-        
+        AnchorPane dialog;
         try {
             dialogStage = new Stage();
-            AnchorPane dialog = FXMLLoader.load(LoadTournamentDialogController.class.getResource("/resources/fxml/LoadTournamentDialog.fxml"));
+            dialog = FXMLLoader.load(LoadTournamentDialogController.class.getResource("/fxml/LoadTournamentDialog.fxml"));
             Scene scene = new Scene(dialog);
             dialogStage.setScene(scene);
             dialogStage.initOwner(this.myParent);
@@ -75,7 +75,15 @@ public class LoadTournamentDialogController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO:  Initialize with list of tournaments
+        AnchorPane dialog = null;
+        try {
+            dialog = FXMLLoader.load(LoadTournamentDialogController.class.getResource("/fxml/LoadTournamentDialog.fxml"));
+        }
+        catch( Exception ex) {
+            System.out.println("Exception happened in show LoadTournamentController");
+            ex.printStackTrace();     
+        }
+// TODO:  Initialize with list of tournaments
         tableTournamentView.setEditable(true);
         //tableTournamentView.setSelectionModel(new TableViewSelectionModel());
         //tableTournamentView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE); //only one row at a time
