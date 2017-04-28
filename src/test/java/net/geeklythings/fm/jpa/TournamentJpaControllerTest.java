@@ -5,10 +5,20 @@
  */
 package net.geeklythings.fm.jpa;
 
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import net.geeklythings.fm.model.entity.Tournament;
+import org.dbunit.database.DatabaseConnection;
+import org.dbunit.database.IDatabaseConnection;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.xml.XmlDataSet;
+import org.dbunit.operation.DatabaseOperation;
+import org.eclipse.persistence.internal.jpa.EntityManagerImpl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -31,7 +41,7 @@ public class TournamentJpaControllerTest {
     @BeforeClass // These happen before class setup, before any instances of the class are built
     public static void setUpClass() {
         if (emf == null ) {
-            emf = (EntityManagerFactory) Persistence.createEntityManagerFactory("DerbyTestPU");
+            emf = (EntityManagerFactory) Persistence.createEntityManagerFactory("FieldMarshalLocal");
         }
     }
     
@@ -41,6 +51,34 @@ public class TournamentJpaControllerTest {
     
     @Before
     public void setUp() {
+        EntityManager em = emf.createEntityManager();
+        IDatabaseConnection connection;
+        connection = new DatabaseConnection(((EntityManagerImpl)(em.getDelegate())).getServerSession().getAccessor().getConnection());
+        IDataSet dataset;
+ 
+        try {      
+            dataset = getDataSet();
+            DatabaseOperation.CLEAN_INSERT.execute(connection, dataset);
+        } catch (Exception ex) {
+            Logger.getLogger(TournamentJpaControllerTest.class.getName()).log(Level.SEVERE, null, ex);
+        }   
+    }
+    
+    protected IDataSet getDataSet() throws Exception
+    {
+        XmlDataSet dataset;     
+        FileInputStream input;      
+        InputStreamReader reader;
+        
+        input = new FileInputStream("src/test/data/fieldmarshal.xml");
+        reader = new InputStreamReader(input);
+        dataset = new XmlDataSet(reader);
+        
+        System.out.print(dataset.toString());
+    
+
+        return dataset;
+//return new FlatXmlDataSetBuilder().build(new FileInputStream("src/test/data/fieldmarshal.xml"));
     }
     
     @After

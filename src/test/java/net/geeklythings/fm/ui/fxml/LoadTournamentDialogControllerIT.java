@@ -5,66 +5,25 @@
  */
 package net.geeklythings.fm.ui.fxml;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.stage.Stage;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import java.awt.Button;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.loadui.testfx.GuiTest;
 
 /**
  *
  * @author Keith
  */
 public class LoadTournamentDialogControllerIT {
-    
+
     public LoadTournamentDialogControllerIT() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
-    /**
-     * Test of showDialog method, of class LoadTournamentDialogController.
-     */
-    //@Test
-    public void testShowDialog() {
-        System.out.println("showDialog");
-        Stage parentStage = null;
-        LoadTournamentDialogController instance = new LoadTournamentDialogController();
-        instance.showDialog(parentStage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of initialize method, of class LoadTournamentDialogController.
-     */
     @Test
-    public void testInitialize() {
-        System.out.println("initialize");
-        URL url = null;
-        ResourceBundle rb = null;
-        LoadTournamentDialogController instance = new LoadTournamentDialogController();
-        instance.initialize(url, rb);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+    public void testSomething() {
+        LoadTournamentDialogController controller;
+        controller = new LoadTournamentDialogController();
     }
-    
 }

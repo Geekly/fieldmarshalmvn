@@ -50,6 +50,20 @@ public class LoadTournamentDialogController implements Initializable {
     private Stage myParent;
     private Stage dialogStage;
     
+    public void LoadTournamentDialogController()
+    {
+        FXMLLoader fxmlLoader;
+        fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/LoadTournamentDialog.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+    }
+    
     public void showDialog( Stage parentStage )
     {    
         this.myParent = parentStage;

@@ -1,0 +1,89 @@
+<!DOCTYPE dataset SYSTEM "dataset.dtd">
+    <dataset name="fieldmarshal">
+        <!-- Table TOURNAMENT -->
+        <table name="TOURNAMENT">
+            <column >TOURNAMENT_ID</column>
+            <column >LOCATION</column>
+            <column >NUMROUNDS</column>
+            <column >ORGANIZER</column>
+            <column >TODAYSDATE</column>
+            <column >CLOCKTIME</column>
+            <column >CLOCKTYPE</column>
+            <column >DESCRIPTION</column>
+            <column >FORMATTYPE</column>
+        
+            <row>
+                <value>999</value>
+                <value>Caspia Convention Center</value>
+                <value>3</value>
+                <value>Coleman Stryker</value>
+                <value>2017-04-26 20:19:50</value>
+                <value>37</value>
+                <value>Timed Turns</value>
+                <value>Baller Style</value>
+                <value>Steamroller 2017</value>
+            </row>
+        </table>
+            <!-- Table PLAYER -->
+        <table name="PLAYER">
+            <column>PLAYER_ID</column>
+            <column >EMAIL</column>
+            <column >FACTION</column>
+            <column >FIRSTNAME</column>
+            <column >LASTNAME</column>
+            <column >HOMETOWN</column>
+            <column >LASTROUNDPLAYED</column>
+            <column >OWNER_ID</column>
+            <row>
+                <value>1</value>
+                <value>stryker@cmail.com</value>
+                <value>Cygnar</value>
+                <value>Coleman</value>
+                <value>Stryker</value>
+                 <value>Caspia</value>
+                <value>1</value>
+                <value>999</value>
+            </row>
+            <row>
+                <value>2</value>
+                <value>stryker@cmail.com</value>
+                <value>Cygnar</value>
+                <value>Major</value>
+                <value>Stryker</value>
+                <value>Caspia</value>
+                <value>1</value>
+                <value>999</value>
+            </row>
+            <row>
+                <value>3</value>
+                <value>stryker@cmail.com</value>
+                <value>Cygnar</value>
+                <value>Lord Commander</value>
+                <value>Stryker</value>
+                <value>Caspia</value>
+                <value>1</value>
+                <value>999</value>
+            </row>
+        </table>   
+        <!-- Table ROUND -->
+        <table name="ROUND">
+            <column>ROUND_ID</column>
+            <column>ROUNDNUMBER</column>
+            <column>OWNER_ID</column>
+            <row>
+                <value>111</value>
+                <value>1</value>
+                <value>999</value>
+            </row>
+            <row>
+                <value>222</value>
+                <value>2</value>
+                <value>999</value>
+            </row>
+            <row>
+                <value>333</value>
+                <value>3</value>
+                <value>999</value>
+            </row>
+        </table>    
+    </dataset>
